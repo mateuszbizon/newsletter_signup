@@ -36,4 +36,50 @@
 		margin-bottom: 10px;
 		padding-left: 10px;
 	}
+
+	&__form-box {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	&__label {
+		font-size: 13px;
+		color: $main-color;
+		font-weight: 700;
+	}
+
+	&__input {
+		padding: 15px 20px;
+		margin-bottom: 10px;
+		border-radius: 5px;
+		border: 1px solid $secondary-color;
+		font-size: 15px;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $main-color;
+		}
+	}
+
+	&__submit-btn {
+		width: 100%;
+		background-color: $main-color;
+		color: #fff;
+		border-radius: 5px;
+		padding: 15px 20px;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.2s;
+
+		&:hover {
+			background-color: hsl(4, 100%, 67%);
+		}
+	}
+
+	&__input-error {
+		border: 1px solid $error-color;
+		color: $error-color;
+        background-color: $background-error-color;
+	}
 }
