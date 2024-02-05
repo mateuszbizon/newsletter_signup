@@ -1,0 +1,13 @@
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+	margin: auto;
+	width: clamp(320px, 100%, 375px);
+	background-color: #fff;
+	border-radius: 15px;
+
+	&__img-mobile {
+		width: 100%;
+	}
+}
