@@ -1,13 +1,16 @@
 @use "../abstract/colors" as *;
 
 .newsletter {
-	margin: auto;
 	width: clamp(320px, 100%, 375px);
 	background-color: #fff;
 	border-radius: 15px;
 
 	&__img-mobile {
 		width: 100%;
+	}
+
+	&__img-desktop {
+		display: none;
 	}
 
 	&__main-box {
@@ -81,7 +84,7 @@
 	&__input-error {
 		border: 1px solid $error-color;
 		color: $error-color;
-        background-color: $background-error-color;
+		background-color: $background-error-color;
 	}
 
 	&__text-error {
@@ -90,5 +93,39 @@
 		right: 0;
 		color: $error-color;
 		visibility: hidden;
+	}
+}
+
+@media (min-width: 992px) {
+	.newsletter {
+		display: flex;
+		gap: 50px;
+		min-width: 900px;
+		min-height: 600px;
+		padding: 20px 20px 20px 50px;
+
+		&__img-box {
+			order: 1;
+			width: max-content;
+			height: max-content;
+		}
+
+		&__img-mobile {
+			display: none;
+		}
+
+		&__img-desktop {
+			display: block;
+		}
+
+		&__main-box {
+			justify-content: center;
+			gap: 20px;
+			padding: 0;
+		}
+
+		&__title {
+			font-size: 50px;
+		}
 	}
 }
