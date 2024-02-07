@@ -38,9 +38,11 @@
 	}
 
 	&__form-box {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		gap: 5px;
+		margin-bottom: 15px;
 	}
 
 	&__label {
@@ -51,7 +53,6 @@
 
 	&__input {
 		padding: 15px 20px;
-		margin-bottom: 10px;
 		border-radius: 5px;
 		border: 1px solid $secondary-color;
 		font-size: 15px;
@@ -81,5 +82,13 @@
 		border: 1px solid $error-color;
 		color: $error-color;
         background-color: $background-error-color;
+	}
+
+	&__text-error {
+		position: absolute;
+		top: 0;
+		right: 0;
+		color: $error-color;
+		visibility: hidden;
 	}
 }
