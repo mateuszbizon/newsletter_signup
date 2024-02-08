@@ -1,7 +1,23 @@
 const newsletterSubmitBtn = document.querySelector("#newsletter-submit");
 const emailInput = document.querySelector("#email");
 const allInputs = document.querySelectorAll(".newsletter__input");
+const newsletterElement = document.querySelector(".newsletter");
+const successModalElement = document.querySelector(".success-modal");
+const dismissBtn = document.querySelector("#success-modal-dismiss");
+const userEmail = document.querySelector("#user-email");
 let formErrors = {};
+
+function showSuccessModal() {
+    userEmail.textContent = emailInput.value;
+    successModalElement.classList.add("success-modal-show");
+    newsletterElement.classList.remove("newsletter-show");
+}
+
+function showNewsletter() {
+    emailInput.value = "";
+    successModalElement.classList.remove("success-modal-show");
+    newsletterElement.classList.add("newsletter-show");
+}
 
 function checkInputIsEmpty() {
     let isInputEmpty = false;
@@ -61,7 +77,11 @@ newsletterSubmitBtn.addEventListener("click", (e) => {
         return;
     }
 
-    console.log('sent!')
+    showSuccessModal();
+})
+
+successModalElement.addEventListener("click", () => {
+    showNewsletter();
 })
 
 emailInput.addEventListener("blur", () => {
