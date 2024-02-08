@@ -1,0 +1,16 @@
+@use "./colors" as *;
+
+@mixin main-btn {
+	width: 100%;
+	background-color: $main-color;
+	color: #fff;
+	border-radius: 5px;
+	padding: 15px 20px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.2s;
+
+	&:hover {
+		background-color: hsl(4, 100%, 67%);
+	}
+}
