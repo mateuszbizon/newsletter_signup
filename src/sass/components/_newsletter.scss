@@ -1,6 +1,7 @@
 @use "../abstract/colors" as *;
 
 .newsletter {
+	display: none;
 	width: clamp(320px, 100%, 375px);
 	background-color: #fff;
 	border-radius: 15px;
@@ -97,9 +98,12 @@
 	}
 }
 
+.newsletter-show {
+	display: flex;
+}
+
 @media (min-width: 992px) {
 	.newsletter {
-		display: flex;
 		gap: 50px;
 		min-width: 900px;
 		min-height: 600px;
