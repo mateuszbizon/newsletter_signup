@@ -1,0 +1,41 @@
+@use "../abstract/colors" as *;
+
+.success-modal {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	gap: 20px;
+	width: clamp(320px, 100%, 375px);
+	background-color: #fff;
+	border-radius: 15px;
+	padding: 15px;
+	height: 500px;
+
+	&__img {
+		width: 64px;
+		height: 64px;
+	}
+
+	&__title {
+		font-size: 30px;
+	}
+
+	&__description {
+		line-height: 20px;
+	}
+
+	&__btn {
+		width: 100%;
+		background-color: $main-color;
+		color: #fff;
+		border-radius: 5px;
+		padding: 15px 20px;
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.2s;
+
+		&:hover {
+			background-color: hsl(4, 100%, 67%);
+		}
+	}
+}
