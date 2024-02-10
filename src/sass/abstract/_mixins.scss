@@ -8,9 +8,10 @@
 	padding: 15px 20px;
 	border: none;
 	cursor: pointer;
-	transition: background-color 0.2s;
+	transition: background-color 0.2s, box-shadow 0.2s;
 
 	&:hover {
-		background-color: hsl(4, 100%, 67%);
+		background: linear-gradient(to right, #f25278 50%, $error-color);
+		box-shadow: -3px 15px 30px $box-shadow-color;
 	}
 }
